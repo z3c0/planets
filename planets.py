@@ -40,5 +40,6 @@ distance_df = planets_df.applymap(lambda n: n.earth_distance)
 print('determining constellations')
 constellation_df = planets_df.applymap(lambda n: ephem.constellation(n)[0])
 
+print('create reports')
 constellation_df.to_markdown('constellations.md')
 distance_df.to_markdown('distances.md')

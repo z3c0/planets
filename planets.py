@@ -13,8 +13,6 @@ def create_reports():
     print('generate date index')
     date = [(today + dt.timedelta(n)).isoformat() for n in range(-36525, 18263)]
 
-    planet_classes = [Mercury, Venus, Moon, Mars, Saturn, Jupiter, Uranus, Neptune, Pluto]
-
     print('instantiate planet vectors')
     mercury =   [Mercury(d) for d in date]
     venus =     [Venus(d) for d in date]
